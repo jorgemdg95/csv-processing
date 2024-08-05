@@ -7,3 +7,6 @@ df['test1'] = df['test1'] * 2
 
 # Print the DataFrame to verify changes
 print(df)
+
+# Export results
+df.to_csv('results.csv', index=False)
