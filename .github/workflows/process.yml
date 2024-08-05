@@ -17,4 +17,4 @@ jobs:
           python-version: '3.12.4'
       # You can test your matrix by printing the current Python version
       - name: Read csv file
-        run: python process_csv.py
+        run: python process_csv.py 
