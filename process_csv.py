@@ -6,5 +6,4 @@ df = pd.read_csv('test.csv')
 # Multiply the 'test1' column by 2
 df['test1'] = df['test1'] * 2
 
-# Save the result to a new CSV file
-df.to_csv('results.csv', index=False)
+print(df)
