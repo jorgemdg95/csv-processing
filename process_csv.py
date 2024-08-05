@@ -10,3 +10,6 @@ print(df)
 
 # Export results
 df.to_csv('results.csv', index=False)
+
+# Check the process
+print("exported file")
