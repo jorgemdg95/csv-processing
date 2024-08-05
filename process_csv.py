@@ -1,3 +1,5 @@
+import pandas as pd
+
 df = pd.read_csv('test.csv')
 
 # Multiply the 'test1' column by 2
