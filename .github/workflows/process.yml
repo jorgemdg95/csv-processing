@@ -1,34 +1,7 @@
-name: Process CSV
-
-on: [push]
-
+on:  push
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  first-job:
+    run-on: windows-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pandas
-
-    - name: Run the Python script
-      run: python process_csv.py
-
-    - name: Commit results
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add results.csv
-        git commit -m 'Add results.csv' || echo "No changes to commit"
-        git push
+      - run: node --version
+      - run: npm --version
