@@ -24,11 +24,11 @@ jobs:
       run: python process_csv.py
 
     - name: Commit results
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git add results.csv
         git commit -m 'Add results.csv'
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
